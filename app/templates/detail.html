@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+   <table border=1>
+      {% for key, value in result.items() %}
+
+      <tr>
+         <th> {{ key }} </th>
+         <td> {{ value }} </td>
+      </tr>
+
+      {% endfor %}
+   </table>
+   <button onclick="history.back()">MODIFY</button>
+
+   <form action="/result" method="POST">
+      <input type="submit" value="SUBMIT" />
+   </form>
+</body>
+
+</html>
